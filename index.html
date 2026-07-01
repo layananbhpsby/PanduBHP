@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PanduBHP - Premium Dashboard v17.3</title>
+    <title>PanduBHP - Premium Dashboard v17.0</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Alpine.js untuk Interaktivitas & State Login -->
@@ -63,9 +63,9 @@
     <!-- ================= SCREEN 1: HALAMAN LOGIN PREMIUM DENGAN BACKGROUND GEDUNG KANWIL ================= -->
     <div x-show="!isLoggedIn" x-cloak class="min-h-screen flex items-center justify-center bg-biru-tua p-4 relative overflow-hidden">
         
-        <!-- LAYER 1: PANGGILAN BARU - AMAN TANPA SPASI -->
+        <!-- LAYER 1: Gambar Lukisan Gedung dengan Transparansi & Efek Blend Blurring -->
         <div class="absolute inset-0 z-0 opacity-25 mix-blend-luminosity bg-cover bg-center bg-no-repeat" 
-             style="background-image: url('assets/background-login.png'); filter: contrast(110%) brightness(90%);">
+             style="background-image: url('ChatGPT Image 11 Des 2025, 12.02.27.png'); filter: contrast(110%) brightness(90%);">
         </div>
         
         <!-- LAYER 2: Efek Gradien & Pencahayaan Dasbor Modern -->
@@ -76,9 +76,8 @@
         <!-- BOX CONTAINER LOGIN -->
         <div class="w-full max-w-md bg-slate-900/60 backdrop-blur-xl border border-slate-800/80 p-8 rounded-3xl shadow-2xl relative z-10">
             <div class="text-center mb-8">
-                <!-- LOGO BARU - AMAN TANPA SPASI -->
-                <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-kuning-emas to-amber-500 flex items-center justify-center shadow-lg shadow-kuning-emas/20 mx-auto mb-4 p-2">
-                    <img src="assets/logo-bhp.png" alt="Logo BHP Surabaya" class="w-full h-full object-contain">
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-kuning-emas to-amber-500 flex items-center justify-center font-bold text-biru-tua shadow-lg shadow-kuning-emas/20 mx-auto mb-4">
+                    <i class="fa-solid fa-scale-balanced text-2xl"></i>
                 </div>
                 <h1 class="font-outfit font-bold text-2xl text-white tracking-wide">Pandu<span class="text-kuning-emas">BHP</span></h1>
                 <p class="text-xs text-slate-300 mt-1">Balai Harta Peninggalan Surabaya</p>
@@ -135,9 +134,8 @@
                 <!-- USER LOGIN SECTION -->
                 <div class="p-5 border-b border-slate-800 flex items-center justify-between bg-slate-950/20 group">
                     <div class="flex items-center gap-3">
-                        <!-- USER PROFILE LOGO SINKRONISASI -->
-                        <div class="w-11 h-11 rounded-xl bg-white flex items-center justify-center p-1 shadow-md">
-                            <img src="assets/logo-bhp.png" alt="Logo" class="w-full h-full object-contain">
+                        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-kuning-emas to-amber-500 flex items-center justify-center font-bold text-biru-tua shadow-md shadow-kuning-emas/10">
+                            <i class="fa-solid fa-user-tie text-lg"></i>
                         </div>
                         <div class="overflow-hidden">
                             <p class="text-sm font-semibold text-white truncate" x-text="username"></p>
@@ -164,7 +162,7 @@
                         <span>Dashboard Statistik</span>
                     </button>
 
-                    <!-- DROPDOWN GROUP: KLIK LAYANAN -->
+                    <!-- DROPDOWN GROUP: KLIK LAYANAN (STRUKTUR RESMI 6 SUB-MENU) -->
                     <div class="space-y-1">
                         <button @click="openKlikLayanan = !openKlikLayanan" 
                                 class="w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium transition-all duration-150"
@@ -217,7 +215,7 @@
                                 <span>Layanan Selesai</span>
                             </button>
 
-                            <!-- 6. TANDA TERIMA -->
+                            <!-- 6. TANDA TERIMA (MENU BARU HAK HULU) -->
                             <button @click="currentTab = 'tanda-terima'" 
                                     class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-medium transition-all duration-150"
                                     :class="currentTab === 'tanda-terima' ? 'bg-biru-terang text-white border-l-2 border-kuning-emas font-semibold shadow-md' : 'hover:bg-biru-terang/30 text-slate-400 hover:text-white'">
@@ -235,6 +233,7 @@
                         <span>Zoompah Wali/Pengampu</span>
                     </button>
 
+                    <!-- MENU UTAMA E-LAPOR -->
                     <button @click="currentTab = 'elapor'; openKlikLayanan = false" 
                             class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-150"
                             :class="currentTab === 'elapor' ? 'bg-biru-terang text-white border-l-4 border-kuning-emas shadow-lg' : 'hover:bg-biru-terang/40 hover:text-white'">
@@ -245,7 +244,7 @@
             </div>
 
             <div class="p-4 border-t border-slate-800 text-xs text-slate-500 font-mono text-center bg-slate-950/30">
-                PANDUBHP V17.3 &copy; 2026
+                PANDUBHP V17.0 &copy; 2026
             </div>
         </aside>
 
@@ -338,9 +337,10 @@
                     </div>
                 </template>
 
-                <!-- 6. LAYANAN SELESAI -->
+                <!-- 6. LAYANAN SELESAI (SUDAH DIRETUR & BERSIH DARI FOLDER TANDA TERIMA) -->
                 <template x-if="currentTab === 'layanan-selesai'">
                     <div class="space-y-6 h-full flex flex-col">
+                        
                         <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col xl:flex-row justify-between items-start xl:items-center gap-6">
                             <div class="flex items-start gap-4">
                                 <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-900 to-blue-700 flex items-center justify-center text-white border border-blue-600 shrink-0">
@@ -351,7 +351,9 @@
                                     <p class="text-xs text-slate-400 mt-1">Seksi khusus penutupan berkas perkara. Silakan isi form di sebelah kanan dan pantau rekap data log pada piringan spreadsheet di bawah ini.</p>
                                 </div>
                             </div>
+                            
                             <div class="flex items-center w-full xl:w-auto shrink-0">
+                                <!-- HANYA SATU TOMBOL SEPERTI INSTRUKSI KAWAN -->
                                 <a :href="gformLayananSelesaiUrl" target="_blank" class="w-full sm:w-auto bg-gradient-to-r from-blue-700 to-blue-800 hover:from-blue-800 hover:to-blue-900 text-white text-xs font-bold py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2 shadow-md shrink-0">
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                     <span>Isi Form & Upload Dokumen</span>
@@ -374,9 +376,11 @@
                     </div>
                 </template>
 
-                <!-- 7. TANDA TERIMA -->
+                <!-- 7. TANDA TERIMA (HALAMAN KANDANG BARU YANG VALID & PRESISI) -->
                 <template x-if="currentTab === 'tanda-terima'">
                     <div class="space-y-6 h-full flex flex-col">
+                        
+                        <!-- Panel Aksi Utama Tanda Terima -->
                         <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col xl:flex-row justify-between items-start xl:items-center gap-6">
                             <div class="flex items-start gap-4">
                                 <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-500 flex items-center justify-center text-white border border-amber-400 shrink-0">
@@ -387,11 +391,14 @@
                                     <p class="text-xs text-slate-400 mt-1">Gunakan formulir untuk memperbarui arsip tanda terima baru, serta akses repositori berkas final melalui tombol *Folder* di samping kanan.</p>
                                 </div>
                             </div>
+                            
+                            <!-- DUA TOMBOL AKSI UNTUK TANDA TERIMA -->
                             <div class="flex flex-col sm:flex-row items-center gap-3 w-full xl:w-auto shrink-0">
                                 <a :href="gformTandaTerimaUrl" target="_blank" class="w-full sm:w-auto bg-biru-tua hover:bg-biru-terang border border-amber-500/20 text-kuning-emas text-xs font-bold py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2 shadow-md shrink-0">
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                     <span>Buka Form Tanda Terima</span>
                                 </a>
+
                                 <a :href="gdriveTandaTerimaFolderUrl" target="_blank" class="w-full sm:w-auto bg-gradient-to-r from-amber-500 to-kuning-emas hover:from-amber-600 hover:to-amber-500 text-biru-tua text-xs font-bold py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2 shadow-md">
                                     <i class="fa-solid fa-folder-open"></i>
                                     <span>Folder Dokumen Tanda Terima</span>
@@ -466,7 +473,7 @@
                 gformLayananSelesaiUrl: 'https://docs.google.com/forms/d/1lyV6666yi7Glm43OvtWOGxrbHuh92KWebifRSk9Xgds/viewform',
                 gformLayananSelesaiSheetUrl: 'https://docs.google.com/spreadsheets/d/1KKsgtPRdJyWscXs795yUY5BMh-RV4nkXprp5DBQcYjY/edit?rm=minimal&gid=152771377',
                 
-                // DATASET HALAMAN BARU: TANDA TERIMA
+                // DATASET HALAMAN BARU: TANDA TERIMA (URL PRESISI DARI KAWAN)
                 gformTandaTerimaUrl: 'https://docs.google.com/forms/d/1qPcjn3zeVqpV1lzB4v4DzZRBfl6qixw9zYxsgSe6cQI/edit',
                 sheetTandaTerimaEmbedUrl: 'https://docs.google.com/spreadsheets/d/1eQjALEGPEJusi6oQOkZI4G6GCiJF0u-uVKFrgFTXE_I/edit?rm=minimal&gid=702332476',
                 gdriveTandaTerimaFolderUrl: 'https://drive.google.com/drive/folders/1dgpqpnUGgHQxDnwsgeu1A2sIP09fi_jK',
