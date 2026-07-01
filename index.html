@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PanduBHP - Premium Dashboard v17.1</title>
+    <title>PanduBHP - Premium Dashboard v17.2</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Alpine.js untuk Interaktivitas & State Login -->
@@ -63,9 +63,9 @@
     <!-- ================= SCREEN 1: HALAMAN LOGIN PREMIUM DENGAN BACKGROUND GEDUNG KANWIL ================= -->
     <div x-show="!isLoggedIn" x-cloak class="min-h-screen flex items-center justify-center bg-biru-tua p-4 relative overflow-hidden">
         
-        <!-- LAYER 1: Menggunakan File Background Login.png Pilihan Kawan -->
+        <!-- LAYER 1: SINKRONISASI JALUR FOLDER ASSETS UNTUK BACKGROUND -->
         <div class="absolute inset-0 z-0 opacity-25 mix-blend-luminosity bg-cover bg-center bg-no-repeat" 
-             style="background-image: url('Background Login.png'); filter: contrast(110%) brightness(90%);">
+             style="background-image: url('assets/Background Login.png'); filter: contrast(110%) brightness(90%);">
         </div>
         
         <!-- LAYER 2: Efek Gradien & Pencahayaan Dasbor Modern -->
@@ -73,12 +73,12 @@
         <div class="absolute -top-40 -left-40 w-96 h-96 bg-biru-terang/30 rounded-full blur-3xl z-0"></div>
         <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-kuning-emas/10 rounded-full blur-3xl z-0"></div>
 
-        <!-- BOX CONTAINER LOGIN (z-10) -->
+        <!-- BOX CONTAINER LOGIN -->
         <div class="w-full max-w-md bg-slate-900/60 backdrop-blur-xl border border-slate-800/80 p-8 rounded-3xl shadow-2xl relative z-10">
             <div class="text-center mb-8">
-                <!-- MENGGANTI ICON TIMBANGAN DENGAN LOGO BHP.PNG PILIHAN KAWAN -->
+                <!-- SINKRONISASI JALUR FOLDER ASSETS UNTUK LOGO BHP -->
                 <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-kuning-emas to-amber-500 flex items-center justify-center shadow-lg shadow-kuning-emas/20 mx-auto mb-4 p-2">
-                    <img src="Logo BHP.png" alt="Logo BHP Surabaya" class="w-full h-full object-contain">
+                    <img src="assets/Logo BHP.png" alt="Logo BHP Surabaya" class="w-full h-full object-contain">
                 </div>
                 <h1 class="font-outfit font-bold text-2xl text-white tracking-wide">Pandu<span class="text-kuning-emas">BHP</span></h1>
                 <p class="text-xs text-slate-300 mt-1">Balai Harta Peninggalan Surabaya</p>
@@ -135,9 +135,9 @@
                 <!-- USER LOGIN SECTION -->
                 <div class="p-5 border-b border-slate-800 flex items-center justify-between bg-slate-950/20 group">
                     <div class="flex items-center gap-3">
-                        <!-- MENGGUNAKAN LOGO BHP DI PROFILE SIDEBAR BILA LOGGED IN -->
+                        <!-- USER PROFILE LOGO SINKRONISASI -->
                         <div class="w-11 h-11 rounded-xl bg-white flex items-center justify-center p-1 shadow-md">
-                            <img src="Logo BHP.png" alt="Logo" class="w-full h-full object-contain">
+                            <img src="assets/Logo BHP.png" alt="Logo" class="w-full h-full object-contain">
                         </div>
                         <div class="overflow-hidden">
                             <p class="text-sm font-semibold text-white truncate" x-text="username"></p>
@@ -245,7 +245,7 @@
             </div>
 
             <div class="p-4 border-t border-slate-800 text-xs text-slate-500 font-mono text-center bg-slate-950/30">
-                PANDUBHP V17.1 &copy; 2026
+                PANDUBHP V17.2 &copy; 2026
             </div>
         </aside>
 
