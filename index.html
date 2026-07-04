@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PanduBHP - Premium Dashboard v17.0</title>
+    <title>PanduBHP - Premium Dashboard v18.0</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Alpine.js untuk Interaktivitas & State Login -->
@@ -60,27 +60,19 @@
 </head>
 <body class="bg-krem-bg text-slate-800 font-sans" x-data="sidebarApp()">
 
-    <!-- ================= SCREEN 1: HALAMAN LOGIN PREMIUM DENGAN BACKGROUND GEDUNG KANWIL ================= -->
+    <!-- ================= SCREEN 1: HALAMAN LOGIN ORIGINAL (PEMULIHAN MUTLAK) ================= -->
     <div x-show="!isLoggedIn" x-cloak class="min-h-screen flex items-center justify-center bg-biru-tua p-4 relative overflow-hidden">
-        
-        <!-- LAYER 1: Gambar Lukisan Gedung dengan Transparansi & Efek Blend Blurring -->
-        <div class="absolute inset-0 z-0 opacity-25 mix-blend-luminosity bg-cover bg-center bg-no-repeat" 
-             style="background-image: url('ChatGPT Image 11 Des 2025, 12.02.27.png'); filter: contrast(110%) brightness(90%);">
-        </div>
-        
-        <!-- LAYER 2: Efek Gradien & Pencahayaan Dasbor Modern -->
-        <div class="absolute inset-0 z-0 bg-gradient-to-t from-biru-tua via-biru-tua/80 to-transparent"></div>
-        <div class="absolute -top-40 -left-40 w-96 h-96 bg-biru-terang/30 rounded-full blur-3xl z-0"></div>
-        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-kuning-emas/10 rounded-full blur-3xl z-0"></div>
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-biru-terang/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-kuning-emas/10 rounded-full blur-3xl"></div>
 
-        <!-- BOX CONTAINER LOGIN -->
-        <div class="w-full max-w-md bg-slate-900/60 backdrop-blur-xl border border-slate-800/80 p-8 rounded-3xl shadow-2xl relative z-10">
+        <div class="w-full max-w-md bg-slate-900/40 backdrop-blur-md border border-slate-800 p-8 rounded-3xl shadow-2xl">
             <div class="text-center mb-8">
+                <!-- KEMBALI KE IKON TIMBANGAN ORIGINAL AMAN 100% -->
                 <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-kuning-emas to-amber-500 flex items-center justify-center font-bold text-biru-tua shadow-lg shadow-kuning-emas/20 mx-auto mb-4">
                     <i class="fa-solid fa-scale-balanced text-2xl"></i>
                 </div>
                 <h1 class="font-outfit font-bold text-2xl text-white tracking-wide">Pandu<span class="text-kuning-emas">BHP</span></h1>
-                <p class="text-xs text-slate-300 mt-1">Balai Harta Peninggalan Surabaya</p>
+                <p class="text-xs text-slate-400 mt-1">Balai Harta Peninggalan Surabaya</p>
             </div>
 
             <div x-show="loginError" x-transition class="mb-4 bg-red-950/40 border border-red-500/30 text-red-400 text-xs py-3 px-4 rounded-xl flex items-center gap-2">
@@ -96,7 +88,7 @@
                             <i class="fa-solid fa-user-shield text-xs"></i>
                         </span>
                         <input type="text" x-model="username" required placeholder="Contoh: Verifikator.Budhi" 
-                               class="w-full bg-slate-950/60 border border-slate-800 focus:border-kuning-emas rounded-xl py-3.5 pl-11 pr-4 text-sm text-white placeholder-slate-600 outline-none transition-all">
+                               class="w-full bg-slate-950/50 border border-slate-800 focus:border-kuning-emas rounded-xl py-3.5 pl-11 pr-4 text-sm text-white placeholder-slate-600 outline-none transition-all">
                     </div>
                 </div>
 
@@ -107,7 +99,7 @@
                             <i class="fa-solid fa-lock text-xs"></i>
                         </span>
                         <input type="password" x-model="password" required placeholder="Masukkan password..." 
-                               class="w-full bg-slate-950/60 border border-slate-800 focus:border-kuning-emas rounded-xl py-3.5 pl-11 pr-4 text-sm text-white placeholder-slate-600 outline-none transition-all">
+                               class="w-full bg-slate-950/50 border border-slate-800 focus:border-kuning-emas rounded-xl py-3.5 pl-11 pr-4 text-sm text-white placeholder-slate-600 outline-none transition-all">
                     </div>
                 </div>
 
@@ -118,7 +110,7 @@
                 </button>
             </form>
 
-            <div class="mt-8 text-center text-[10px] text-slate-500 font-mono">
+            <div class="mt-8 text-center text-[10px] text-slate-600 font-mono">
                 SISTEM OTENTIKASI INTERNAL &copy; 2026
             </div>
         </div>
@@ -162,7 +154,7 @@
                         <span>Dashboard Statistik</span>
                     </button>
 
-                    <!-- DROPDOWN GROUP: KLIK LAYANAN (STRUKTUR RESMI 6 SUB-MENU) -->
+                    <!-- DROPDOWN GROUP: KLIK LAYANAN -->
                     <div class="space-y-1">
                         <button @click="openKlikLayanan = !openKlikLayanan" 
                                 class="w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium transition-all duration-150"
@@ -215,7 +207,7 @@
                                 <span>Layanan Selesai</span>
                             </button>
 
-                            <!-- 6. TANDA TERIMA (MENU BARU HAK HULU) -->
+                            <!-- 6. TANDA TERIMA -->
                             <button @click="currentTab = 'tanda-terima'" 
                                     class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-medium transition-all duration-150"
                                     :class="currentTab === 'tanda-terima' ? 'bg-biru-terang text-white border-l-2 border-kuning-emas font-semibold shadow-md' : 'hover:bg-biru-terang/30 text-slate-400 hover:text-white'">
@@ -240,11 +232,19 @@
                         <i class="fa-solid fa-bullhorn text-base" :class="currentTab === 'elapor' ? 'text-kuning-emas' : ''"></i>
                         <span>e-Lapor Pengampu/Wali</span>
                     </button>
+
+                    <!-- BARU! MENU UTAMA: DATA BANTU REGISTER (BERADA DI BAWAH E-LAPOR) -->
+                    <button @click="currentTab = 'databantu'; openKlikLayanan = false" 
+                            class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-150"
+                            :class="currentTab === 'databantu' ? 'bg-biru-terang text-white border-l-4 border-kuning-emas shadow-lg' : 'hover:bg-biru-terang/40 hover:text-white'">
+                        <i class="fa-solid fa-database text-base" :class="currentTab === 'databantu' ? 'text-kuning-emas' : ''"></i>
+                        <span>Data Bantu Register</span>
+                    </button>
                 </nav>
             </div>
 
             <div class="p-4 border-t border-slate-800 text-xs text-slate-500 font-mono text-center bg-slate-950/30">
-                PANDUBHP V17.0 &copy; 2026
+                PANDUBHP V18.0 &copy; 2026
             </div>
         </aside>
 
@@ -337,10 +337,9 @@
                     </div>
                 </template>
 
-                <!-- 6. LAYANAN SELESAI (SUDAH DIRETUR & BERSIH DARI FOLDER TANDA TERIMA) -->
+                <!-- 6. LAYANAN SELESAI -->
                 <template x-if="currentTab === 'layanan-selesai'">
                     <div class="space-y-6 h-full flex flex-col">
-                        
                         <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col xl:flex-row justify-between items-start xl:items-center gap-6">
                             <div class="flex items-start gap-4">
                                 <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-900 to-blue-700 flex items-center justify-center text-white border border-blue-600 shrink-0">
@@ -351,9 +350,7 @@
                                     <p class="text-xs text-slate-400 mt-1">Seksi khusus penutupan berkas perkara. Silakan isi form di sebelah kanan dan pantau rekap data log pada piringan spreadsheet di bawah ini.</p>
                                 </div>
                             </div>
-                            
                             <div class="flex items-center w-full xl:w-auto shrink-0">
-                                <!-- HANYA SATU TOMBOL SEPERTI INSTRUKSI KAWAN -->
                                 <a :href="gformLayananSelesaiUrl" target="_blank" class="w-full sm:w-auto bg-gradient-to-r from-blue-700 to-blue-800 hover:from-blue-800 hover:to-blue-900 text-white text-xs font-bold py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2 shadow-md shrink-0">
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                     <span>Isi Form & Upload Dokumen</span>
@@ -376,11 +373,9 @@
                     </div>
                 </template>
 
-                <!-- 7. TANDA TERIMA (HALAMAN KANDANG BARU YANG VALID & PRESISI) -->
+                <!-- 7. TANDA TERIMA -->
                 <template x-if="currentTab === 'tanda-terima'">
                     <div class="space-y-6 h-full flex flex-col">
-                        
-                        <!-- Panel Aksi Utama Tanda Terima -->
                         <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col xl:flex-row justify-between items-start xl:items-center gap-6">
                             <div class="flex items-start gap-4">
                                 <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-500 flex items-center justify-center text-white border border-amber-400 shrink-0">
@@ -391,14 +386,11 @@
                                     <p class="text-xs text-slate-400 mt-1">Gunakan formulir untuk memperbarui arsip tanda terima baru, serta akses repositori berkas final melalui tombol *Folder* di samping kanan.</p>
                                 </div>
                             </div>
-                            
-                            <!-- DUA TOMBOL AKSI UNTUK TANDA TERIMA -->
                             <div class="flex flex-col sm:flex-row items-center gap-3 w-full xl:w-auto shrink-0">
                                 <a :href="gformTandaTerimaUrl" target="_blank" class="w-full sm:w-auto bg-biru-tua hover:bg-biru-terang border border-amber-500/20 text-kuning-emas text-xs font-bold py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2 shadow-md shrink-0">
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                     <span>Buka Form Tanda Terima</span>
                                 </a>
-
                                 <a :href="gdriveTandaTerimaFolderUrl" target="_blank" class="w-full sm:w-auto bg-gradient-to-r from-amber-500 to-kuning-emas hover:from-amber-600 hover:to-amber-500 text-biru-tua text-xs font-bold py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2 shadow-md">
                                     <i class="fa-solid fa-folder-open"></i>
                                     <span>Folder Dokumen Tanda Terima</span>
@@ -445,6 +437,16 @@
                         <!-- Konten sengaja dikosongkan secara mutlak -->
                     </div>
                 </template>
+
+                <!-- BARU! 10. SEKSI KONTEN UNTUK DATA BANTU REGISTER -->
+                <template x-if="currentTab === 'databantu'">
+                    <div class="h-full w-full">
+                        <div class="bg-krem-card border border-amber-200/60 p-6 rounded-2xl shadow-xs">
+                            <h3 class="text-lg font-bold text-biru-tua mb-2">Workspace Data Bantu Register</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">Wadah ini sudah aktif kawan. Begitu materi konten, formulir pelengkap, atau tautan Spreadsheet Data Bantu Register milik kawan sudah siap, kita bisa langsung pasang di panel ini.</p>
+                        </div>
+                    </div>
+                </template>
             </div>
         </main>
     </div>
@@ -473,7 +475,7 @@
                 gformLayananSelesaiUrl: 'https://docs.google.com/forms/d/1lyV6666yi7Glm43OvtWOGxrbHuh92KWebifRSk9Xgds/viewform',
                 gformLayananSelesaiSheetUrl: 'https://docs.google.com/spreadsheets/d/1KKsgtPRdJyWscXs795yUY5BMh-RV4nkXprp5DBQcYjY/edit?rm=minimal&gid=152771377',
                 
-                // DATASET HALAMAN BARU: TANDA TERIMA (URL PRESISI DARI KAWAN)
+                // DATASET HALAMAN BARU: TANDA TERIMA
                 gformTandaTerimaUrl: 'https://docs.google.com/forms/d/1qPcjn3zeVqpV1lzB4v4DzZRBfl6qixw9zYxsgSe6cQI/edit',
                 sheetTandaTerimaEmbedUrl: 'https://docs.google.com/spreadsheets/d/1eQjALEGPEJusi6oQOkZI4G6GCiJF0u-uVKFrgFTXE_I/edit?rm=minimal&gid=702332476',
                 gdriveTandaTerimaFolderUrl: 'https://drive.google.com/drive/folders/1dgpqpnUGgHQxDnwsgeu1A2sIP09fi_jK',
@@ -486,8 +488,8 @@
                         'Verifikator.Reza', 'Verifikator.Yaffed', 'Verifikator.Yulita', 'Verifikator.Farida',
                         'Verifikator.Ajeng', 'Verifikator.Lintang', 'Verifikator.Bimo', 'Verifikator.Febri',
                         'Verifikator.Agata', 'Verifikator.Fiola', 'Verifikator.Fauzi', 'Verifikator.Vito',
-                        'Verifikator.Ratna', 'Verifikator.Arya', 'Verifikator.Putri', 'Verifikator.Dian',
-                        'Verifikator.Tony', 'Verifikator.Indah', 'Operator.Anzi', 'Operator.Mela', 'Operator.Andik'
+                        'Ratna.Verifikator', 'Arya.Verifikator', 'Putri.Verifikator', 'Dian.Verifikator',
+                        'Tony.Verifikator', 'Indah.Verifikator', 'Operator.Anzi', 'Operator.Mela', 'Operator.Andik'
                     ]; //[cite: 1]
                     
                     const inputUser = this.username.trim();
@@ -518,6 +520,7 @@
                     if (this.currentTab === 'tanda-terima') return 'Klik Layanan — Pusat Unggah & Arsip Tanda Terima';
                     if (this.currentTab === 'zoompah') return 'Pelaksanaan Sumpah Digital (Zoompah)';
                     if (this.currentTab === 'elapor') return 'Pusat Pengaduan & e-Lapor';
+                    if (this.currentTab === 'databantu') return 'Pusat Referensi — Data Bantu Register';
                     return 'PanduBHP';
                 }
             }
