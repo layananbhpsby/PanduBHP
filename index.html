@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PanduBHP - Premium Dashboard v18.0</title>
+    <title>PanduBHP - Premium Dashboard v18.1</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Alpine.js untuk Interaktivitas & State Login -->
@@ -67,7 +67,6 @@
 
         <div class="w-full max-w-md bg-slate-900/40 backdrop-blur-md border border-slate-800 p-8 rounded-3xl shadow-2xl">
             <div class="text-center mb-8">
-                <!-- KEMBALI KE IKON TIMBANGAN ORIGINAL AMAN 100% -->
                 <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-kuning-emas to-amber-500 flex items-center justify-center font-bold text-biru-tua shadow-lg shadow-kuning-emas/20 mx-auto mb-4">
                     <i class="fa-solid fa-scale-balanced text-2xl"></i>
                 </div>
@@ -233,7 +232,7 @@
                         <span>e-Lapor Pengampu/Wali</span>
                     </button>
 
-                    <!-- BARU! MENU UTAMA: DATA BANTU REGISTER (BERADA DI BAWAH E-LAPOR) -->
+                    <!-- MENU UTAMA: DATA BANTU REGISTER -->
                     <button @click="currentTab = 'databantu'; openKlikLayanan = false" 
                             class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-150"
                             :class="currentTab === 'databantu' ? 'bg-biru-terang text-white border-l-4 border-kuning-emas shadow-lg' : 'hover:bg-biru-terang/40 hover:text-white'">
@@ -244,7 +243,7 @@
             </div>
 
             <div class="p-4 border-t border-slate-800 text-xs text-slate-500 font-mono text-center bg-slate-950/30">
-                PANDUBHP V18.0 &copy; 2026
+                PANDUBHP V18.1 &copy; 2026
             </div>
         </aside>
 
@@ -438,12 +437,78 @@
                     </div>
                 </template>
 
-                <!-- BARU! 10. SEKSI KONTEN UNTUK DATA BANTU REGISTER -->
+                <!-- 10. SEKSI KONTEN: 3 KOTAK DATA BANTU REGISTER (NEW PREMIUM GRID DESIGN) -->
                 <template x-if="currentTab === 'databantu'">
-                    <div class="h-full w-full">
-                        <div class="bg-krem-card border border-amber-200/60 p-6 rounded-2xl shadow-xs">
-                            <h3 class="text-lg font-bold text-biru-tua mb-2">Workspace Data Bantu Register</h3>
-                            <p class="text-sm text-slate-600 leading-relaxed">Wadah ini sudah aktif kawan. Begitu materi konten, formulir pelengkap, atau tautan Spreadsheet Data Bantu Register milik kawan sudah siap, kita bisa langsung pasang di panel ini.</p>
+                    <div class="space-y-6">
+                        <!-- Header Seksi -->
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
+                            <h3 class="text-md font-bold text-biru-tua">Sistem Informasi Referensi & Data Bantu Register</h3>
+                            <p class="text-xs text-slate-400 mt-1">Silakan pilih wilayah tugas administratif di bawah ini untuk mengelola dan membuka lembar piringan kerja data bantu secara langsung.</p>
+                        </div>
+
+                        <!-- GRID 3 KOTAK PROFESIONAL -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            
+                            <!-- KOTAK 1: REGISTER WILAYAH I -->
+                            <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between min-h-[220px]">
+                                <div class="flex items-start justify-between">
+                                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-700 to-blue-500 flex items-center justify-center text-white text-lg font-bold shadow-md shadow-blue-500/10">
+                                        <i class="fa-solid fa-folder-closed"></i>
+                                    </div>
+                                    <span class="text-[10px] font-mono font-bold px-2.5 py-1 bg-blue-50 text-blue-600 rounded-full tracking-wider">SEKTOR I</span>
+                                </div>
+                                <div class="mt-4 flex-1">
+                                    <h4 class="font-outfit font-bold text-lg text-biru-tua">Register Wilayah I</h4>
+                                    <p class="text-xs text-slate-400 mt-1 leading-relaxed">Akses berkas, verifikasi, log data bantu perkara register yang masuk dalam yurisdiksi kerja Wilayah I.</p>
+                                </div>
+                                <div class="mt-5">
+                                    <a :href="sheetBantuWilayah1Url" target="_blank" class="w-full bg-slate-900 hover:bg-biru-terang text-white text-xs font-bold py-3 px-4 rounded-xl transition flex items-center justify-center gap-2">
+                                        <span>Buka Spreadsheet Wilayah I</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-kuning-emas"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- KOTAK 2: REGISTER WILAYAH II -->
+                            <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between min-h-[220px]">
+                                <div class="flex items-start justify-between">
+                                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-600 to-emerald-400 flex items-center justify-center text-white text-lg font-bold shadow-md shadow-emerald-500/10">
+                                        <i class="fa-solid fa-folder-open"></i>
+                                    </div>
+                                    <span class="text-[10px] font-mono font-bold px-2.5 py-1 bg-emerald-50 text-emerald-600 rounded-full tracking-wider">SEKTOR II</span>
+                                </div>
+                                <div class="mt-4 flex-1">
+                                    <h4 class="font-outfit font-bold text-lg text-biru-tua">Register Wilayah II</h4>
+                                    <p class="text-xs text-slate-400 mt-1 leading-relaxed">Akses berkas, verifikasi, log data bantu perkara register yang masuk dalam yurisdiksi kerja Wilayah II.</p>
+                                </div>
+                                <div class="mt-5">
+                                    <a :href="sheetBantuWilayah2Url" target="_blank" class="w-full bg-slate-900 hover:bg-biru-terang text-white text-xs font-bold py-3 px-4 rounded-xl transition flex items-center justify-center gap-2">
+                                        <span>Buka Spreadsheet Wilayah II</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-kuning-emas"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- KOTAK 3: REGISTER WILAYAH III -->
+                            <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between min-h-[220px]">
+                                <div class="flex items-start justify-between">
+                                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-600 to-amber-500 flex items-center justify-center text-white text-lg font-bold shadow-md shadow-amber-500/10">
+                                        <i class="fa-solid fa-folder-tree"></i>
+                                    </div>
+                                    <span class="text-[10px] font-mono font-bold px-2.5 py-1 bg-amber-50 text-amber-600 rounded-full tracking-wider">SEKTOR III</span>
+                                </div>
+                                <div class="mt-4 flex-1">
+                                    <h4 class="font-outfit font-bold text-lg text-biru-tua">Register Wilayah III</h4>
+                                    <p class="text-xs text-slate-400 mt-1 leading-relaxed">Akses berkas, verifikasi, log data bantu perkara register yang masuk dalam yurisdiksi kerja Wilayah III.</p>
+                                </div>
+                                <div class="mt-5">
+                                    <a :href="sheetBantuWilayah3Url" target="_blank" class="w-full bg-slate-900 hover:bg-biru-terang text-white text-xs font-bold py-3 px-4 rounded-xl transition flex items-center justify-center gap-2">
+                                        <span>Buka Spreadsheet Wilayah III</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-kuning-emas"></i>
+                                    </a>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </template>
@@ -480,6 +545,11 @@
                 sheetTandaTerimaEmbedUrl: 'https://docs.google.com/spreadsheets/d/1eQjALEGPEJusi6oQOkZI4G6GCiJF0u-uVKFrgFTXE_I/edit?rm=minimal&gid=702332476',
                 gdriveTandaTerimaFolderUrl: 'https://drive.google.com/drive/folders/1dgpqpnUGgHQxDnwsgeu1A2sIP09fi_jK',
 
+                // TAUTAN DATA BANTU REGISTER (GANTI TANDA '#' DENGAN URL SPREADSHEET ASLI TIM KAWAN)
+                sheetBantuWilayah1Url: '#',
+                sheetBantuWilayah2Url: '#',
+                sheetBantuWilayah3Url: '#',
+
                 // MEKANISME SECURE LOGIN MULTI-USER ARRAY INTERNAL BHP SURABAYA[cite: 1]
                 handleLogin() {
                     const allowedUsers = [
@@ -488,8 +558,8 @@
                         'Verifikator.Reza', 'Verifikator.Yaffed', 'Verifikator.Yulita', 'Verifikator.Farida',
                         'Verifikator.Ajeng', 'Verifikator.Lintang', 'Verifikator.Bimo', 'Verifikator.Febri',
                         'Verifikator.Agata', 'Verifikator.Fiola', 'Verifikator.Fauzi', 'Verifikator.Vito',
-                        'Ratna.Verifikator', 'Arya.Verifikator', 'Putri.Verifikator', 'Dian.Verifikator',
-                        'Tony.Verifikator', 'Indah.Verifikator', 'Operator.Anzi', 'Operator.Mela', 'Operator.Andik'
+                        'Verifikator.Ratna', 'Verifikator.Arya', 'Verifikator.Putri', 'Verifikator.Dian',
+                        'Verifikator.Tony', 'Verifikator.Indah', 'Operator.Anzi', 'Operator.Mela', 'Operator.Andik'
                     ]; //[cite: 1]
                     
                     const inputUser = this.username.trim();
