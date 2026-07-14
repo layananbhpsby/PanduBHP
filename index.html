@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PanduBHP - Premium Dashboard v19.0</title>
+    <title>PanduBHP - Premium Dashboard v20.0</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Alpine.js untuk Interaktivitas & State Login -->
@@ -167,22 +167,22 @@
 
                         <div x-show="openKlikLayanan" x-cloak x-transition class="pl-6 space-y-1 mt-1 border-l border-slate-800 ml-6">
                             <button @click="currentTab = 'permohonan-baru'" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-medium transition-all duration-150" :class="currentTab === 'permohonan-baru' ? 'bg-biru-terang text-white border-l-2 border-kuning-emas font-semibold shadow-md' : 'hover:bg-biru-terang/30 text-slate-400 hover:text-white'">
-                                <i class="fa-solid fa-circle-plus text-xs" :class="currentTab === 'permohonan-baru' ? 'text-kuning-emas' : ''"></i><span>Permohonan Baru</span>
+                                <i class="fa-solid fa-circle-plus text-xs"></i><span>Permohonan Baru</span>
                             </button>
                             <button @click="currentTab = 'verifikasi-layanan'" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-medium transition-all duration-150" :class="currentTab === 'verifikasi-layanan' ? 'bg-biru-terang text-white border-l-2 border-kuning-emas font-semibold shadow-md' : 'hover:bg-biru-terang/30 text-slate-400 hover:text-white'">
-                                <i class="fa-solid fa-list-check text-xs" :class="currentTab === 'verifikasi-layanan' ? 'text-kuning-emas' : ''"></i><span>Verifikasi Berkas</span>
+                                <i class="fa-solid fa-list-check text-xs"></i><span>Verifikasi Berkas</span>
                             </button>
                             <button @click="currentTab = 'verifikasi-pnbp'" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-medium transition-all duration-150" :class="currentTab === 'verifikasi-pnbp' ? 'bg-biru-terang text-white border-l-2 border-kuning-emas font-semibold shadow-md' : 'hover:bg-biru-terang/30 text-slate-400 hover:text-white'">
-                                <i class="fa-solid fa-receipt text-xs" :class="currentTab === 'verifikasi-pnbp' ? 'text-kuning-emas' : ''"></i><span>Verifikasi PNBP</span>
+                                <i class="fa-solid fa-receipt text-xs"></i><span>Verifikasi PNBP</span>
                             </button>
                             <button @click="currentTab = 'disposisi-berkas'" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-medium transition-all duration-150" :class="currentTab === 'disposisi-berkas' ? 'bg-biru-terang text-white border-l-2 border-kuning-emas font-semibold shadow-md' : 'hover:bg-biru-terang/30 text-slate-400 hover:text-white'">
-                                <i class="fa-solid fa-file-signature text-xs" :class="currentTab === 'disposisi-berkas' ? 'text-kuning-emas' : ''"></i><span>Disposisi Berkas</span>
+                                <i class="fa-solid fa-file-signature text-xs"></i><span>Disposisi Berkas</span>
                             </button>
                             <button @click="currentTab = 'layanan-selesai'" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-medium transition-all duration-150" :class="currentTab === 'layanan-selesai' ? 'bg-biru-terang text-white border-l-2 border-kuning-emas font-semibold shadow-md' : 'hover:bg-biru-terang/30 text-slate-400 hover:text-white'">
-                                <i class="fa-solid fa-circle-check text-xs" :class="currentTab === 'layanan-selesai' ? 'text-kuning-emas' : ''"></i><span>Layanan Selesai</span>
+                                <i class="fa-solid fa-circle-check text-xs"></i><span>Layanan Selesai</span>
                             </button>
                             <button @click="currentTab = 'tanda-terima'" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-medium transition-all duration-150" :class="currentTab === 'tanda-terima' ? 'bg-biru-terang text-white border-l-2 border-kuning-emas font-semibold shadow-md' : 'hover:bg-biru-terang/30 text-slate-400 hover:text-white'">
-                                <i class="fa-solid fa-file-invoice text-xs" :class="currentTab === 'tanda-terima' ? 'text-kuning-emas' : ''"></i><span>Tanda Terima</span>
+                                <i class="fa-solid fa-file-invoice text-xs"></i><span>Tanda Terima</span>
                             </button>
                         </div>
                     </div>
@@ -191,7 +191,7 @@
                     <button @click="currentTab = 'zoompah'; openKlikLayanan = false; openLegalisasi = false" 
                             class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-150"
                             :class="currentTab === 'zoompah' ? 'bg-biru-terang text-white border-l-4 border-kuning-emas shadow-lg' : 'hover:bg-biru-terang/40 hover:text-white'">
-                        <i class="fa-solid fa-gavel text-base" :class="currentTab === 'zoompah' ? 'text-kuning-emas' : ''"></i>
+                        <i class="fa-solid fa-gavel text-base"></i>
                         <span>Zoompah Wali/Pengampu</span>
                     </button>
 
@@ -199,7 +199,7 @@
                     <button @click="currentTab = 'elapor'; openKlikLayanan = false; openLegalisasi = false" 
                             class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-150"
                             :class="currentTab === 'elapor' ? 'bg-biru-terang text-white border-l-4 border-kuning-emas shadow-lg' : 'hover:bg-biru-terang/40 hover:text-white'">
-                        <i class="fa-solid fa-bullhorn text-base" :class="currentTab === 'elapor' ? 'text-kuning-emas' : ''"></i>
+                        <i class="fa-solid fa-bullhorn text-base"></i>
                         <span>e-Lapor Pengampu/Wali</span>
                     </button>
 
@@ -207,45 +207,31 @@
                     <button @click="currentTab = 'databantu'; openKlikLayanan = false; openLegalisasi = false" 
                             class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-150"
                             :class="currentTab === 'databantu' ? 'bg-biru-terang text-white border-l-4 border-kuning-emas shadow-lg' : 'hover:bg-biru-terang/40 hover:text-white'">
-                        <i class="fa-solid fa-database text-base" :class="currentTab === 'databantu' ? 'text-kuning-emas' : ''"></i>
+                        <i class="fa-solid fa-database text-base"></i>
                         <span>Data Bantu Register</span>
                     </button>
 
-                    <!-- BARU! DROPDOWN GROUP 2: LEGALISASI DOKUMEN -->
+                    <!-- DROPDOWN GROUP 2: LEGALISASI DOKUMEN -->
                     <div class="space-y-1">
                         <button @click="openLegalisasi = !openLegalisasi; openKlikLayanan = false" 
                                 class="w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium transition-all duration-150"
                                 :class="(currentTab === 'legalisasi-permohonan' || currentTab === 'legalisasi-verifikasi' || currentTab === 'legalisasi-terima') ? 'bg-biru-terang/50 text-white' : 'hover:bg-biru-terang/40 hover:text-white'">
                             <div class="flex items-center gap-3">
-                                <i class="fa-solid fa-stamp text-base" :class="(currentTab === 'legalisasi-permohonan' || currentTab === 'legalisasi-verifikasi' || currentTab === 'legalisasi-terima') ? 'text-kuning-emas' : ''"></i>
+                                <i class="fa-solid fa-stamp text-base"></i>
                                 <span>Legalisasi Dokumen</span>
                             </div>
                             <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200" :class="openLegalisasi ? 'rotate-180 text-kuning-emas' : ''"></i>
                         </button>
 
                         <div x-show="openLegalisasi" x-cloak x-transition class="pl-6 space-y-1 mt-1 border-l border-slate-800 ml-6">
-                            <!-- SUB MENU 1: PERMOHONAN -->
-                            <button @click="currentTab = 'legalisasi-permohonan'" 
-                                    class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-medium transition-all duration-150"
-                                    :class="currentTab === 'legalisasi-permohonan' ? 'bg-biru-terang text-white border-l-2 border-kuning-emas font-semibold shadow-md' : 'hover:bg-biru-terang/30 text-slate-400 hover:text-white'">
-                                <i class="fa-solid fa-file-signature text-xs" :class="currentTab === 'legalisasi-permohonan' ? 'text-kuning-emas' : ''"></i>
-                                <span>Permohonan</span>
+                            <button @click="currentTab = 'legalisasi-permohonan'" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-medium transition-all duration-150" :class="currentTab === 'legalisasi-permohonan' ? 'bg-biru-terang text-white border-l-2 border-kuning-emas font-semibold shadow-md' : 'hover:bg-biru-terang/30 text-slate-400 hover:text-white'">
+                                <i class="fa-solid fa-file-signature text-xs"></i><span>Permohonan</span>
                             </button>
-
-                            <!-- SUB MENU 2: VERIFIKASI -->
-                            <button @click="currentTab = 'legalisasi-verifikasi'" 
-                                    class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-medium transition-all duration-150"
-                                    :class="currentTab === 'legalisasi-verifikasi' ? 'bg-biru-terang text-white border-l-2 border-kuning-emas font-semibold shadow-md' : 'hover:bg-biru-terang/30 text-slate-400 hover:text-white'">
-                                <i class="fa-solid fa-clipboard-check text-xs" :class="currentTab === 'legalisasi-verifikasi' ? 'text-kuning-emas' : ''"></i>
-                                <span>Verifikasi</span>
+                            <button @click="currentTab = 'legalisasi-verifikasi'" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-medium transition-all duration-150" :class="currentTab === 'legalisasi-verifikasi' ? 'bg-biru-terang text-white border-l-2 border-kuning-emas font-semibold shadow-md' : 'hover:bg-biru-terang/30 text-slate-400 hover:text-white'">
+                                <i class="fa-solid fa-clipboard-check text-xs"></i><span>Verifikasi</span>
                             </button>
-
-                            <!-- SUB MENU 3: TANDA TERIMA -->
-                            <button @click="currentTab = 'legalisasi-terima'" 
-                                    class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-medium transition-all duration-150"
-                                    :class="currentTab === 'legalisasi-terima' ? 'bg-biru-terang text-white border-l-2 border-kuning-emas font-semibold shadow-md' : 'hover:bg-biru-terang/30 text-slate-400 hover:text-white'">
-                                <i class="fa-solid fa-receipt text-xs" :class="currentTab === 'legalisasi-terima' ? 'text-kuning-emas' : ''"></i>
-                                <span>Tanda Terima</span>
+                            <button @click="currentTab = 'legalisasi-terima'" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-medium transition-all duration-150" :class="currentTab === 'legalisasi-terima' ? 'bg-biru-terang text-white border-l-2 border-kuning-emas font-semibold shadow-md' : 'hover:bg-biru-terang/30 text-slate-400 hover:text-white'">
+                                <i class="fa-solid fa-receipt text-xs"></i><span>Tanda Terima</span>
                             </button>
                         </div>
                     </div>
@@ -253,7 +239,7 @@
             </div>
 
             <div class="p-4 border-t border-slate-800 text-xs text-slate-500 font-mono text-center bg-slate-950/30">
-                PANDUBHP V19.0 &copy; 2026
+                PANDUBHP V20.0 &copy; 2026
             </div>
         </aside>
 
@@ -267,23 +253,28 @@
             </header>
 
             <div class="flex-1 overflow-y-auto p-8">
-                <!-- 1. DASHBOARD STATISTIK -->
+                
+                <!-- ================= 1. HALAMAN UTAMA DASHBOARD (LOOKER STUDIO INTEGRATED) ================= -->
                 <template x-if="currentTab === 'dashboard'">
-                    <div class="bg-krem-card border border-amber-200/60 p-6 rounded-2xl shadow-xs">
-                        <h3 class="text-lg font-bold text-biru-tua mb-2">Selamat Datang di Workspace PanduBHP</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">Pondasi struktur warna emas, biru tua, dan krem berhasil dimuat. Konten filter, detail permohonan (Pengampuan, Perwalian, SKHW, Wasiat) serta metrik SLA akan diimplementasikan penuh di seksi ini.</p>
+                    <div class="space-y-4 h-full flex flex-col min-h-[750px] bg-white border border-slate-200 rounded-3xl p-4 shadow-sm relative">
+                        <div class="w-full h-full min-h-[700px] rounded-2xl overflow-hidden relative">
+                            <!-- INTEGRASI IFRAME DARI CORETAN SKEMA KAWAN -->
+                            <iframe src="https://datastudio.google.com/embed/reporting/17484932-5030-49d5-ac91-2c39110a609c/page/gjj3F" 
+                                    class="w-full h-full min-h-[700px] border-0" 
+                                    frameborder="0" 
+                                    style="border:0" 
+                                    allowfullscreen 
+                                    sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+                            </iframe>
+                        </div>
                     </div>
                 </template>
 
                 <!-- 2. PERMOHONAN BARU -->
                 <template x-if="currentTab === 'permohonan-baru'">
                     <div class="space-y-4 h-full flex flex-col min-h-[650px]">
-                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
-                            <h4 class="font-bold text-biru-tua text-sm">Form Layanan Publik BHP Surabaya</h4>
-                            <p class="text-xs text-slate-400">Pengisian berkas ini otomatis tersambung ke database Google Sheets utama.</p>
-                        </div>
                         <div class="flex-1 bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden relative">
-                            <iframe :src="tallyUrl" class="w-full h-full border-0" title="Layanan Publik BHP Surabaya" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+                            <iframe :src="tallyUrl" class="w-full h-full border-0" title="Layanan Publik" frameborder="0"></iframe>
                         </div>
                     </div>
                 </template>
@@ -291,15 +282,6 @@
                 <!-- 3. VERIFIKASI BERKAS -->
                 <template x-if="currentTab === 'verifikasi-layanan'">
                     <div class="space-y-4 h-full flex flex-col min-h-[650px]">
-                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                            <div>
-                                <h3 class="text-md font-bold text-biru-tua">Workspace Verifikasi Formil & Materiil Persyaratan</h3>
-                                <p class="text-xs text-slate-400">Pencarian Drive: Gunakan Nomor Layanan dan/atau Nama Terampu/Anak/Mendiang/Pewasiat</p>
-                            </div>
-                            <a :href="gdriveFolderUrl" target="_blank" class="w-full sm:w-auto bg-gradient-to-r from-amber-500 to-kuning-emas text-biru-tua text-xs font-bold py-3 px-5 rounded-xl flex items-center justify-center gap-2 shadow-md">
-                                <i class="fa-solid fa-folder-open"></i><span>Verifikasi Formil, klik disini</span>
-                            </a>
-                        </div>
                         <div class="w-full flex-1 bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden relative">
                             <div class="sheet-container">
                                 <iframe :src="sheetEmbedUrl" class="sheet-iframe" title="Database Terpadu BHP" frameborder="0"></iframe>
@@ -311,18 +293,9 @@
                 <!-- 4. VERIFIKASI PNBP -->
                 <template x-if="currentTab === 'verifikasi-pnbp'">
                     <div class="space-y-4 h-full flex flex-col min-h-[650px]">
-                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                            <div>
-                                <h3 class="text-md font-bold text-biru-tua">Workspace Rekonsiliasi & Verifikasi PNBP</h3>
-                                <p class="text-xs text-slate-400">Pencarian Berkas: Silakan periksa kesesuaian nominal Slip Setoran Pajak / Voucher PNBP Pemohon</p>
-                            </div>
-                            <a :href="pnbpFolderUrl" target="_blank" class="w-full sm:w-auto bg-gradient-to-r from-emerald-600 to-emerald-500 text-white text-xs font-bold py-3 px-5 rounded-xl flex items-center justify-center gap-2 shadow-md">
-                                <i class="fa-solid fa-receipt"></i><span>Kuitansi PNBP, Klik Sini</span>
-                            </a>
-                        </div>
                         <div class="w-full flex-1 bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden relative">
                             <div class="sheet-container">
-                                <iframe :src="pnbpSheetEmbedUrl" class="sheet-iframe" title="Database PNBP BHP" frameborder="0"></iframe>
+                                <iframe :src="pnbpSheetEmbedUrl" class="sheet-iframe" title="Database PNBP" frameborder="0"></iframe>
                             </div>
                         </div>
                     </div>
@@ -331,17 +304,8 @@
                 <!-- 5. DISPOSISI BERKAS -->
                 <template x-if="currentTab === 'disposisi-berkas'">
                     <div class="space-y-4 h-full flex flex-col min-h-[700px]">
-                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                            <div>
-                                <h4 class="font-bold text-biru-tua text-sm">Form Disposisi Berkas Internal</h4>
-                                <p class="text-xs text-slate-400">Gunakan formulir ini untuk melakukan disposisi peninjauan berkas layanan.</p>
-                            </div>
-                            <a :href="gformDisposisiSheetUrl" target="_blank" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 border border-amber-600 text-biru-tua text-xs px-5 py-3 rounded-xl font-bold transition flex items-center justify-center gap-2 shadow-md">
-                                <i class="fa-solid fa-table"></i> Disposisi Kasi, Klik Sini
-                            </a>
-                        </div>
                         <div class="flex-1 bg-slate-50 border border-slate-200 rounded-2xl shadow-sm overflow-hidden flex justify-center p-4">
-                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYaM6FZOQHiB806f453lUu0y5rMT53ggysjZxBdhXZCSju1A/viewform?embedded=true" class="w-full max-w-3xl h-full border-0 rounded-xl shadow-xs bg-white" title="Form Disposisi Berkas" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYaM6FZOQHiB806f453lUu0y5rMT53ggysjZxBdhXZCSju1A/viewform?embedded=true" class="w-full max-w-3xl h-full border-0 rounded-xl bg-white" title="Form Disposisi" frameborder="0"></iframe>
                         </div>
                     </div>
                 </template>
@@ -349,29 +313,7 @@
                 <!-- 6. LAYANAN SELESAI -->
                 <template x-if="currentTab === 'layanan-selesai'">
                     <div class="space-y-6 h-full flex flex-col">
-                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col xl:flex-row justify-between items-start xl:items-center gap-6">
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-900 to-blue-700 flex items-center justify-center text-white border border-blue-600 shrink-0">
-                                    <i class="fa-solid fa-circle-check text-lg text-kuning-emas"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-md font-bold text-biru-tua">Formulir Penutupan & Dokumen Layanan Selesai</h3>
-                                    <p class="text-xs text-slate-400 mt-1">Seksi khusus penutupan berkas perkara. Silakan isi form di sebelah kanan dan pantau rekap data log pada piringan spreadsheet di bawah ini.</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center w-full xl:w-auto shrink-0">
-                                <a :href="gformLayananSelesaiUrl" target="_blank" class="w-full sm:w-auto bg-gradient-to-r from-blue-700 to-blue-800 hover:from-blue-800 hover:to-blue-900 text-white text-xs font-bold py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2 shadow-md shrink-0">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    <span>Isi Form & Upload Dokumen</span>
-                                </a>
-                            </div>
-                        </div>
-
                         <div class="flex-1 min-h-[500px] bg-white border border-slate-200 rounded-2xl shadow-sm p-5 flex flex-col gap-3">
-                            <div class="flex items-center gap-2 border-b border-slate-100 pb-3">
-                                <i class="fa-solid fa-table text-slate-400 text-sm"></i>
-                                <span class="text-xs font-semibold text-slate-500 font-mono">MONITORING ARCHIVE DATA LAYANAN SELESAI (SPREADSHEET)</span>
-                            </div>
                             <div class="flex-1 overflow-hidden relative rounded-xl border border-slate-100">
                                 <div class="sheet-container">
                                     <iframe :src="gformLayananSelesaiSheetUrl" class="sheet-iframe" title="Database Layanan Selesai" frameborder="0"></iframe>
@@ -384,36 +326,10 @@
                 <!-- 7. TANDA TERIMA -->
                 <template x-if="currentTab === 'tanda-terima'">
                     <div class="space-y-6 h-full flex flex-col">
-                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col xl:flex-row justify-between items-start xl:items-center gap-6">
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-500 flex items-center justify-center text-white border border-amber-400 shrink-0">
-                                    <i class="fa-solid fa-file-invoice text-lg text-biru-tua"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-md font-bold text-biru-tua">Manajemen & Penerbitan Dokumen Tanda Terima</h3>
-                                    <p class="text-xs text-slate-400 mt-1">Gunakan formulir untuk memperbarui arsip tanda terima baru, serta akses repositori berkas final melalui tombol *Folder* di samping kanan.</p>
-                                </div>
-                            </div>
-                            <div class="flex flex-col sm:flex-row items-center gap-3 w-full xl:w-auto shrink-0">
-                                <a :href="gformTandaTerimaUrl" target="_blank" class="w-full sm:w-auto bg-biru-tua hover:bg-biru-terang border border-amber-500/20 text-kuning-emas text-xs font-bold py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2 shadow-md shrink-0">
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                    <span>Buka Form Tanda Terima</span>
-                                </a>
-                                <a :href="gdriveTandaTerimaFolderUrl" target="_blank" class="w-full sm:w-auto bg-gradient-to-r from-amber-500 to-kuning-emas hover:from-amber-600 hover:to-amber-500 text-biru-tua text-xs font-bold py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2 shadow-md">
-                                    <i class="fa-solid fa-folder-open"></i>
-                                    <span>Folder Dokumen Tanda Terima</span>
-                                </a>
-                            </div>
-                        </div>
-
                         <div class="flex-1 min-h-[500px] bg-white border border-slate-200 rounded-2xl shadow-sm p-5 flex flex-col gap-3">
-                            <div class="flex items-center gap-2 border-b border-slate-100 pb-3">
-                                <i class="fa-solid fa-table text-slate-400 text-sm"></i>
-                                <span class="text-xs font-semibold text-slate-500 font-mono">MONITORING ARCHIVE DATA SPREADSHEET TANDA TERIMA</span>
-                            </div>
                             <div class="flex-1 overflow-hidden relative rounded-xl border border-slate-100">
                                 <div class="sheet-container">
-                                    <iframe :src="sheetTandaTerimaEmbedUrl" class="sheet-iframe" title="Database Monitoring Tanda Terima" frameborder="0"></iframe>
+                                    <iframe :src="sheetTandaTerimaEmbedUrl" class="sheet-iframe" title="Monitoring Tanda Terima" frameborder="0"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -422,103 +338,50 @@
 
                 <!-- 8. ZOOMPAH -->
                 <template x-if="currentTab === 'zoompah'">
-                    <div class="space-y-4 h-full flex flex-col min-h-[650px]">
-                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                            <div>
-                                <h3 class="text-md font-bold text-biru-tua">Kalender Pelaksanaan Sumpah Digital (Zoompah)</h3>
-                                <p class="text-xs text-slate-400">Jadwal otomatis sinkron dengan Google Calendar</p>
-                            </div>
-                            <a :href="editJadwalSheetUrl" target="_blank" class="w-full sm:w-auto bg-biru-tua text-kuning-emas text-xs font-bold py-3 px-5 rounded-xl shadow-md">
-                                <i class="fa-solid fa-pen-to-square"></i><span>Edit Jadwal Zoompah, Klik Sini</span>
-                            </a>
-                        </div>
-                        <div class="w-full flex-1 bg-white border border-slate-200 rounded-2xl shadow-sm p-4 overflow-hidden relative">
-                            <iframe src="https://calendar.google.com/calendar/embed?src=layanan.bhpsby%40gmail.com&ctz=Asia%2FJakarta" style="border: 0" class="w-full h-full" frameborder="0" scrolling="no"></iframe>
-                        </div>
+                    <div class="w-full flex-1 bg-white border border-slate-200 rounded-2xl shadow-sm p-4 overflow-hidden relative min-h-[650px]">
+                        <iframe src="https://calendar.google.com/calendar/embed?src=layanan.bhpsby%40gmail.com&ctz=Asia%2FJakarta" style="border: 0" class="w-full h-full" frameborder="0" scrolling="no"></iframe>
                     </div>
                 </template>
 
                 <!-- 9. E-LAPOR -->
                 <template x-if="currentTab === 'elapor'">
-                    <div class="h-full w-full">
-                        <!-- Konten sengaja dikosongkan secara mutlak -->
-                    </div>
+                    <div class="h-full w-full"></div>
                 </template>
 
                 <!-- 10. DATA BANTU REGISTER -->
                 <template x-if="currentTab === 'databantu'">
                     <div class="space-y-6">
-                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
-                            <h3 class="text-md font-bold text-biru-tua">Sistem Informasi Referensi & Data Bantu Register</h3>
-                            <p class="text-xs text-slate-400 mt-1">Silakan pilih wilayah tugas administratif di bawah ini untuk mengelola dan membuka lembar piringan kerja data bantu secara langsung.</p>
-                        </div>
-
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <!-- WILAYAH I -->
-                            <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between min-h-[220px]">
-                                <div class="flex items-start justify-between">
-                                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-700 to-blue-500 flex items-center justify-center text-white text-lg font-bold shadow-md shadow-blue-500/10"><i class="fa-solid fa-folder-closed"></i></div>
-                                    <span class="text-[10px] font-mono font-bold px-2.5 py-1 bg-blue-50 text-blue-600 rounded-full tracking-wider">SEKTOR I</span>
-                                </div>
-                                <div class="mt-4 flex-1">
-                                    <h4 class="font-outfit font-bold text-lg text-biru-tua">Register Wilayah I</h4>
-                                    <p class="text-xs text-slate-400 mt-1 leading-relaxed">Akses berkas, verifikasi, log data bantu perkara register yang masuk dalam yurisdiksi kerja Wilayah I.</p>
-                                </div>
-                                <div class="mt-5">
-                                    <a :href="sheetBantuWilayah1Url" target="_blank" class="w-full bg-slate-900 hover:bg-biru-terang text-white text-xs font-bold py-3 px-4 rounded-xl transition flex items-center justify-center gap-2"><span>Buka Spreadsheet Wilayah I</span><i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-kuning-emas"></i></a>
-                                </div>
+                            <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between min-h-[220px]">
+                                <h4 class="font-outfit font-bold text-lg text-biru-tua">Register Wilayah I</h4>
+                                <a :href="sheetBantuWilayah1Url" target="_blank" class="w-full bg-slate-900 text-white text-xs text-center py-3 rounded-xl font-bold">Buka Spreadsheet</a>
                             </div>
-                            <!-- WILAYAH II -->
-                            <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between min-h-[220px]">
-                                <div class="flex items-start justify-between">
-                                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-600 to-emerald-400 flex items-center justify-center text-white text-lg font-bold shadow-md shadow-emerald-500/10"><i class="fa-solid fa-folder-open"></i></div>
-                                    <span class="text-[10px] font-mono font-bold px-2.5 py-1 bg-emerald-50 text-emerald-600 rounded-full tracking-wider">SEKTOR II</span>
-                                </div>
-                                <div class="mt-4 flex-1">
-                                    <h4 class="font-outfit font-bold text-lg text-biru-tua">Register Wilayah II</h4>
-                                    <p class="text-xs text-slate-400 mt-1 leading-relaxed">Akses berkas, verifikasi, log data bantu perkara register yang masuk dalam yurisdiksi kerja Wilayah II.</p>
-                                </div>
-                                <div class="mt-5">
-                                    <a :href="sheetBantuWilayah2Url" target="_blank" class="w-full bg-slate-900 hover:bg-biru-terang text-white text-xs font-bold py-3 px-4 rounded-xl transition flex items-center justify-center gap-2"><span>Buka Spreadsheet Wilayah II</span><i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-kuning-emas"></i></a>
-                                </div>
+                            <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between min-h-[220px]">
+                                <h4 class="font-outfit font-bold text-lg text-biru-tua">Register Wilayah II</h4>
+                                <a :href="sheetBantuWilayah2Url" target="_blank" class="w-full bg-slate-900 text-white text-xs text-center py-3 rounded-xl font-bold">Buka Spreadsheet</a>
                             </div>
-                            <!-- WILAYAH III -->
-                            <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-200 flex flex-col justify-between min-h-[220px]">
-                                <div class="flex items-start justify-between">
-                                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-600 to-amber-500 flex items-center justify-center text-white text-lg font-bold shadow-md shadow-amber-500/10"><i class="fa-solid fa-folder-tree"></i></div>
-                                    <span class="text-[10px] font-mono font-bold px-2.5 py-1 bg-amber-50 text-amber-600 rounded-full tracking-wider">SEKTOR III</span>
-                                </div>
-                                <div class="mt-4 flex-1">
-                                    <h4 class="font-outfit font-bold text-lg text-biru-tua">Register Wilayah III</h4>
-                                    <p class="text-xs text-slate-400 mt-1 leading-relaxed">Akses berkas, verifikasi, log data bantu perkara register yang masuk dalam yurisdiksi kerja Wilayah III.</p>
-                                </div>
-                                <div class="mt-5">
-                                    <a :href="sheetBantuWilayah3Url" target="_blank" class="w-full bg-slate-900 hover:bg-biru-terang text-white text-xs font-bold py-3 px-4 rounded-xl transition flex items-center justify-center gap-2"><span>Buka Spreadsheet Wilayah III</span><i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-kuning-emas"></i></a>
-                                </div>
+                            <div class="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between min-h-[220px]">
+                                <h4 class="font-outfit font-bold text-lg text-biru-tua">Register Wilayah III</h4>
+                                <a :href="sheetBantuWilayah3Url" target="_blank" class="w-full bg-slate-900 text-white text-xs text-center py-3 rounded-xl font-bold">Buka Spreadsheet</a>
                             </div>
                         </div>
                     </div>
                 </template>
 
-                <!-- BARU! 11. SEKSI KONTEN UNTUK DROPDOWN LEGALISASI DOKUMEN -->
+                <!-- 11. SUB-MENU DROPDOWN LEGALISASI DOKUMEN -->
                 <template x-if="currentTab === 'legalisasi-permohonan'">
                     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
                         <h3 class="text-lg font-bold text-biru-tua mb-2">Workspace Permohonan Legalisasi</h3>
-                        <p class="text-sm text-slate-600">Halaman pengisian permohonan baru legalisasi dokumen. Modul formulir penginputan eksternal siap dipasang di sini kawan.</p>
                     </div>
                 </template>
-
                 <template x-if="currentTab === 'legalisasi-verifikasi'">
                     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
                         <h3 class="text-lg font-bold text-biru-tua mb-2">Workspace Verifikasi Dokumen Legalisasi</h3>
-                        <p class="text-sm text-slate-600">Halaman verifikasi fisik/digital berkas legalisasi dokumen. Modul validasi dan piringan lembar kendali siap dikaitkan di sini kawan.</p>
                     </div>
                 </template>
-
                 <template x-if="currentTab === 'legalisasi-terima'">
                     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
                         <h3 class="text-lg font-bold text-biru-tua mb-2">Workspace Tanda Terima Legalisasi</h3>
-                        <p class="text-sm text-slate-600">Halaman perekaman log tanda terima berkas legalisasi yang sudah selesai. Repositori folder penyimpanan akhir siap ditautkan di sini kawan.</p>
                     </div>
                 </template>
             </div>
@@ -535,7 +398,7 @@
                 loginError: '',
                 currentTab: 'dashboard',         
                 openKlikLayanan: false, 
-                openLegalisasi: false, // State interaktivitas menu dropdown baru
+                openLegalisasi: false,
 
                 // Tautan Integrasi Cloud BHP Surabaya
                 tallyUrl: 'https://tally.so/r/eqNq7E',
@@ -546,16 +409,11 @@
                 pnbpFolderUrl: 'https://drive.google.com/drive/folders/1bTO7V33XgqS79I034gJewhb5erDoRG_X',
                 editJadwalSheetUrl: 'https://docs.google.com/spreadsheets/d/1chraN-Hp1IxAFbeDsZYUWUPizyiZ338_woieLGtHAVM/edit?gid=1894152199#gid=1894152199',
                 
-                // DATASET HALAMAN LAYANAN SELESAI
-                gformLayananSelesaiUrl: 'https://docs.google.com/forms/d/1lyV6666yi7Glm43OvtWOGxrbHuh92KWebifRSk9Xgds/viewform',
                 gformLayananSelesaiSheetUrl: 'https://docs.google.com/spreadsheets/d/1KKsgtPRdJyWscXs795yUY5BMh-RV4nkXprp5DBQcYjY/edit?rm=minimal&gid=152771377',
-                
-                // DATASET HALAMAN BARU: TANDA TERIMA
-                gformTandaTerimaUrl: 'https://docs.google.com/forms/d/1qPcjn3zeVqpV1lzB4v4DzZRBfl6qixw9zYxsgSe6cQI/edit',
                 sheetTandaTerimaEmbedUrl: 'https://docs.google.com/spreadsheets/d/1eQjALEGPEJusi6oQOkZI4G6GCiJF0u-uVKFrgFTXE_I/edit?rm=minimal&gid=702332476',
                 gdriveTandaTerimaFolderUrl: 'https://drive.google.com/drive/folders/1dgpqpnUGgHQxDnwsgeu1A2sIP09fi_jK',
 
-                // TAUTAN RESMI DATA BANTU REGISTER INTEGRASI DUA ARA
+                // TAUTAN DATA BANTU REGISTER
                 sheetBantuWilayah1Url: 'https://docs.google.com/spreadsheets/d/1uFS4PQwLsjW9-0jTvIwwLwpvRlGpwWw_vMtidnHlMEM/edit?gid=1609137948#gid=1609137948',
                 sheetBantuWilayah2Url: 'https://docs.google.com/spreadsheets/d/1qYkyG9ysLHDUQIw2VThTbfOH0tTEvJ_nJgws7hjgewg/edit?gid=1165990431#gid=1165990431',
                 sheetBantuWilayah3Url: 'https://docs.google.com/spreadsheets/d/1RbNdMf_cmgqLISr3LLlxRh0lIREaYnuONXEkEYMeHjE/edit?gid=19452479#gid=19452479',
