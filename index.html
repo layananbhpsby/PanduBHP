@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PanduBHP - Premium Dashboard v20.1</title>
+    <title>PanduBHP - Premium Dashboard v20.2</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Alpine.js untuk Interaktivitas & State Login -->
@@ -60,7 +60,7 @@
 </head>
 <body class="bg-krem-bg text-slate-800 font-sans" x-data="sidebarApp()">
 
-    <!-- ================= SCREEN 1: HALAMAN LOGIN ORIGINAL (PEMULIHAN MUTLAK) ================= -->
+    <!-- ================= SCREEN 1: HALAMAN LOGIN ORIGINAL ================= -->
     <div x-show="!isLoggedIn" x-cloak class="min-h-screen flex items-center justify-center bg-biru-tua p-4 relative overflow-hidden">
         <div class="absolute -top-40 -left-40 w-96 h-96 bg-biru-terang/20 rounded-full blur-3xl"></div>
         <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-kuning-emas/10 rounded-full blur-3xl"></div>
@@ -237,7 +237,7 @@
             </div>
 
             <div class="p-4 border-t border-slate-800 text-xs text-slate-500 font-mono text-center bg-slate-950/30">
-                PANDUBHP V20.1 &copy; 2026
+                PANDUBHP V20.2 &copy; 2026
             </div>
         </aside>
 
@@ -280,7 +280,7 @@
                     </div>
                 </template>
 
-                <!-- 3. VERIFIKASI BERKAS (DENGAN TOMBOL EMAS HEADER) -->
+                <!-- 3. VERIFIKASI BERKAS -->
                 <template x-if="currentTab === 'verifikasi-layanan'">
                     <div class="space-y-4 h-full flex flex-col min-h-[650px]">
                         <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
@@ -288,7 +288,6 @@
                                 <h3 class="text-md font-bold text-biru-tua">Workspace Verifikasi Formil & Materiil Persyaratan</h3>
                                 <p class="text-xs text-slate-400">Pencarian Drive: Gunakan Nomor Layanan dan/atau Nama Terampu/Anak/Mendiang/Pewasiat</p>
                             </div>
-                            <!-- TOMBOL EMAS VERIFIKASI FORMIL DIKEMBALIKAN -->
                             <a :href="gdriveFolderUrl" target="_blank" class="w-full sm:w-auto bg-gradient-to-r from-amber-500 to-kuning-emas text-biru-tua text-xs font-bold py-3 px-5 rounded-xl flex items-center justify-center gap-2 shadow-md">
                                 <i class="fa-solid fa-folder-open"></i><span>Verifikasi Formil, klik disini</span>
                             </a>
@@ -301,7 +300,7 @@
                     </div>
                 </template>
 
-                <!-- 4. VERIFIKASI PNBP (DENGAN TOMBOL HIJAU KUITANSI HEADER) -->
+                <!-- 4. VERIFIKASI PNBP -->
                 <template x-if="currentTab === 'verifikasi-pnbp'">
                     <div class="space-y-4 h-full flex flex-col min-h-[650px]">
                         <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
@@ -309,7 +308,6 @@
                                 <h3 class="text-md font-bold text-biru-tua">Workspace Rekonsiliasi & Verifikasi PNBP</h3>
                                 <p class="text-xs text-slate-400">Pencarian Berkas: Silakan periksa kesesuaian nominal Slip Setoran Pajak / Voucher PNBP Pemohon</p>
                             </div>
-                            <!-- TOMBOL HIJAU KUITANSI PNBP DIKEMBALIKAN -->
                             <a :href="pnbpFolderUrl" target="_blank" class="w-full sm:w-auto bg-gradient-to-r from-emerald-600 to-emerald-500 text-white text-xs font-bold py-3 px-5 rounded-xl flex items-center justify-center gap-2 shadow-md">
                                 <i class="fa-solid fa-receipt"></i><span>Kuitansi PNBP, Klik Sini</span>
                             </a>
@@ -322,7 +320,7 @@
                     </div>
                 </template>
 
-                <!-- 5. DISPOSISI BERKAS (DENGAN TOMBOL AMBER DISPOSISI KASI HEADER) -->
+                <!-- 5. DISPOSISI BERKAS -->
                 <template x-if="currentTab === 'disposisi-berkas'">
                     <div class="space-y-4 h-full flex flex-col min-h-[700px]">
                         <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
@@ -330,7 +328,6 @@
                                 <h4 class="font-bold text-biru-tua text-sm">Form Disposisi Berkas Internal</h4>
                                 <p class="text-xs text-slate-400">Gunakan formulir ini untuk melakukan disposisi peninjauan berkas layanan.</p>
                             </div>
-                            <!-- TOMBOL DISPOSISI KASI DIKEMBALIKAN -->
                             <a :href="gformDisposisiSheetUrl" target="_blank" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 border border-amber-600 text-biru-tua text-xs px-5 py-3 rounded-xl font-bold transition flex items-center justify-center gap-2 shadow-md">
                                 <i class="fa-solid fa-table"></i> Disposisi Kasi, Klik Sini
                             </a>
@@ -415,7 +412,7 @@
                     </div>
                 </template>
 
-                <!-- 8. ZOOMPAH (UKURAN TINGGI DIPERBAIKI PERMANEN) -->
+                <!-- 8. ZOOMPAH -->
                 <template x-if="currentTab === 'zoompah'">
                     <div class="space-y-4 h-full flex flex-col min-h-[700px]">
                         <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
@@ -514,7 +511,7 @@
                 sheetBantuWilayah2Url: 'https://docs.google.com/spreadsheets/d/1qYkyG9ysLHDUQIw2VThTbfOH0tTEvJ_nJgws7hjgewg/edit?gid=1165990431#gid=1165990431',
                 sheetBantuWilayah3Url: 'https://docs.google.com/spreadsheets/d/1RbNdMf_cmgqLISr3LLlxRh0lIREaYnuONXEkEYMeHjE/edit?gid=19452479#gid=19452479',
 
-                // MEKANISME SECURE LOGIN MULTI-USER ARRAY INTERNAL BHP SURABAYA[cite: 1]
+                // MEKANISME SECURE LOGIN MULTI-USER
                 handleLogin() {
                     const allowedUsers = [
                         'Kepala.Hendra', 'Kasi1.Dian', 'Kasi2.Yesse', 'Kasi3.Ridlwan', 'Kasubag.Novi',
@@ -524,12 +521,12 @@
                         'Verifikator.Agata', 'Verifikator.Fiola', 'Verifikator.Fauzi', 'Verifikator.Vito',
                         'Verifikator.Ratna', 'Verifikator.Arya', 'Verifikator.Putri', 'Verifikator.Dian',
                         'Verifikator.Tony', 'Verifikator.Indah', 'Operator.Anzi', 'Operator.Mela', 'Operator.Andik'
-                    ];[cite: 1]
+                    ];
                     
                     const inputUser = this.username.trim();
                     const inputPass = this.password;
 
-                    if (allowedUsers.includes(inputUser) && inputPass === '123456') {[cite: 1]
+                    if (allowedUsers.includes(inputUser) && inputPass === '123456') {
                         this.isLoggedIn = true;
                         this.loginError = '';
                         this.currentTab = 'dashboard';
